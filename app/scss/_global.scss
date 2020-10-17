@@ -9,6 +9,7 @@ html{
 a{
    display: inline-block;
    text-decoration: none;
+   color: #fff;
 }
 ul,
 li{
@@ -21,12 +22,17 @@ body{
    font-family: 'Fira Sans', sans-serif;
    font-weight: 400;
    font-size: 16px;
-}
-
-.suptitle-left{
-   opacity: .5;
+   background-color: #171919;
    color: #fff;
    text-transform: uppercase;
+}
+.container{
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.headline-left{
+   opacity: .5; 
    letter-spacing: 7.333333px;
    line-height: 32px;
    font-size: 22px;
@@ -41,5 +47,77 @@ body{
       left: 0;
       background-color: #fff;
       top: 50%; 
+   }
+}
+.title{
+   span{
+      font-size: 200px;
+      color: rgba(#fff, .02);
+      position: relative;
+      font-weight: 800;
+      transform: translateX(-50px);
+      display: inline-block;
+   }
+   h3{
+      margin: 0;
+      right: -5px;
+      top: 0;
+      color: #fff;
+      font-size: 80px;
+      position: absolute;
+      
+      &::before{
+         content: '';
+         position: absolute;
+         width: 80px;
+         height: 1px;
+         top: 0;
+         right: 0;
+         background-color: $green;
+      }
+   }
+}
+
+.subtitle{
+   display: inline-block;
+   text-align: right;
+   &__head{
+      font-weight: 800;
+      font-size: 40px;
+      padding-right: 10px;
+      span{
+         font-weight: 100;
+      }
+   }
+}
+.btn{
+   font-size: 40px;
+   font-weight: 800;
+   line-height: 36px;
+   span{
+      padding: 17px 57px 15px 17px;
+      background-color: $green;
+      display: inline-block;
+      margin-left: 19px;
+      position: relative;
+      &::before{
+         content: '';
+         position: absolute;
+         width: 20px;
+         height: 1px;
+         background-color: #fff;
+         top: 50%;
+         left: -10px;
+      }
+      &::after{
+         content: '';
+         position: absolute;
+         background-image: url('../images/arrows-right.svg');
+         width: 25px;
+         height: 21px;
+         top: 50%;
+         right: 17px;
+         transform: translateY(-50%);
+      }
    }
 }
