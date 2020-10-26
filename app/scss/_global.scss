@@ -25,6 +25,8 @@ body{
    background-color: #171919;
    color: #fff;
    text-transform: uppercase;
+   min-width: 320px;
+   overflow-x: hidden;
 }
 .container{
    max-width: 1920px;
@@ -69,6 +71,9 @@ body{
 }
 .title{
    span{
+      display: inline-block;
+   }
+   div{
       font-size: 200px;
       color: rgba(#fff, .02);
       position: relative;
